@@ -48,7 +48,9 @@ module Monitorix
         Thread.current[:monitorix_sql_event_id] = nil
       end
 
-      def self.normalize_sql(sql)
+      private
+
+      def normalize_sql(sql)
         return "" if sql.nil?
 
         normalized = sql.dup
@@ -61,8 +63,6 @@ module Monitorix
         normalized.strip!
         normalized
       end
-
-      private_class_method :normalize_sql
     end
   end
 end

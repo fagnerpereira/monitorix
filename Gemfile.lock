@@ -160,6 +160,8 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    mocha (2.7.1)
+      ruby2_keywords (>= 0.0.5)
     msgpack (1.8.0)
     net-imap (0.5.12)
       date
@@ -291,6 +293,7 @@ GEM
     ruby-vips (2.2.5)
       ffi (~> 1.12)
       logger
+    ruby2_keywords (0.0.5)
     securerandom (0.4.1)
     shoulda-context (2.0.0)
     shoulda-matchers (7.0.1)
@@ -375,6 +378,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   minitest-reporters
+  mocha
   phlex-rails
   propshaft
   puma (>= 5.0)
