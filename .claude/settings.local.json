@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(cat:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "WebSearch",
+      "Bash(bin/rails:*)",
+      "Bash(curl:*)",
+      "Bash(RAILS_ENV=test bin/rails db:create:*)",
+      "Bash(bun install:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,20 @@
+{
+  "name": "monitorix",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun run build:css && bun run build:js",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
+    "build:js": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
+    "dev": "bun run build:css && bun run build:js"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.5",
+    "esbuild": "^0.23.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

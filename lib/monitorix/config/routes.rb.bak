@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+Monitorix::Engine.routes.draw do
+  root "dashboard#index"
+
+  resources :requests, only: [:index, :show]
+  resources :errors, only: [:index, :show]
+  resources :background_jobs, only: [:index, :show]
+  resources :slow_queries, only: [:index]
+  resources :code_suggestions, only: [:index]
+
+  get "endpoints", to: "endpoints#index"
+  get "endpoints/:id", to: "endpoints#show", as: :endpoint
+end
